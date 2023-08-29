@@ -1,0 +1,28 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parser const number literal definition 1`] = `
+Module {
+  "statements": [
+    DefineConstant {
+      "name": Identifier {
+        "name": "x",
+        "token": Token {
+          "literal": "x",
+          "type": "Ident",
+        },
+      },
+      "token": Token {
+        "literal": "x",
+        "type": "Ident",
+      },
+      "value": NumberLiteral {
+        "token": Token {
+          "literal": "69",
+          "type": "Number",
+        },
+        "value": 69,
+      },
+    },
+  ],
+}
+`;
