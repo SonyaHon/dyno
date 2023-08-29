@@ -26,3 +26,135 @@ Module {
   ],
 }
 `;
+
+exports[`parser ident literal expression statement 1`] = `
+Module {
+  "statements": [
+    EpxressionStatement {
+      "expression": Identifier {
+        "name": "x",
+        "token": Token {
+          "literal": "x",
+          "type": "Ident",
+        },
+      },
+      "token": Token {
+        "literal": "x",
+        "type": "Ident",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parser void return statement 1`] = `
+Module {
+  "statements": [
+    Return {
+      "returnValue": VoidLiteral {
+        "token": Token {
+          "literal": "return",
+          "type": "Return",
+        },
+        "value": undefined,
+      },
+      "token": Token {
+        "literal": "return",
+        "type": "Return",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parser number return statement 1`] = `
+Module {
+  "statements": [
+    Return {
+      "returnValue": NumberLiteral {
+        "token": Token {
+          "literal": "10",
+          "type": "Number",
+        },
+        "value": 10,
+      },
+      "token": Token {
+        "literal": "return",
+        "type": "Return",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parser number literal expression statement 1`] = `
+Module {
+  "statements": [
+    EpxressionStatement {
+      "expression": NumberLiteral {
+        "token": Token {
+          "literal": "10",
+          "type": "Number",
+        },
+        "value": 10,
+      },
+      "token": Token {
+        "literal": "10",
+        "type": "Number",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parser not number expression statement 1`] = `
+Module {
+  "statements": [
+    EpxressionStatement {
+      "expression": NotExpression {
+        "token": Token {
+          "literal": "!",
+          "type": "Bang",
+        },
+        "value": NumberLiteral {
+          "token": Token {
+            "literal": "0",
+            "type": "Number",
+          },
+          "value": 0,
+        },
+      },
+      "token": Token {
+        "literal": "!",
+        "type": "Bang",
+      },
+    },
+  ],
+}
+`;
+
+exports[`parser minus number expression statement 1`] = `
+Module {
+  "statements": [
+    EpxressionStatement {
+      "expression": MinusExpression {
+        "token": Token {
+          "literal": "-",
+          "type": "Minus",
+        },
+        "value": NumberLiteral {
+          "token": Token {
+            "literal": "10",
+            "type": "Number",
+          },
+          "value": 10,
+        },
+      },
+      "token": Token {
+        "literal": "-",
+        "type": "Minus",
+      },
+    },
+  ],
+}
+`;

@@ -31,6 +31,7 @@ export enum TokenType {
   ColonColon = "ColonColon",
   ColonEqual = "ColonEqual",
   NotEqual = "NotEqual",
+  Equal = "Equal",
 
   // Keywords
   Function = "Function",

@@ -8,18 +8,22 @@ export async function startRepl() {
   process.stdout.write(prompt);
 
   for await (const input of console) {
-    switch (input) {
-      case ".clear":
-        console.clear();
-        break;
-      case ".exit":
-        console.log("Bye...");
-        return;
-      default:
-        const lexer = new Lexer(input);
-        const parser = new Parser(lexer);
-        const module = parser.parse();
-        console.log(module);
+    try {
+      switch (input) {
+        case ".clear":
+          console.clear();
+          break;
+        case ".exit":
+          console.log("Bye...");
+          return;
+        default:
+          const lexer = new Lexer(input);
+          const parser = new Parser(lexer);
+          const module = parser.parse();
+          console.log(module);
+      }
+    } catch (error) {
+      console.error(error);
     }
     process.stdout.write(prompt);
   }
